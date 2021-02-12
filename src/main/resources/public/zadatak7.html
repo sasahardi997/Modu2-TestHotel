@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sobe</title>
+	<script src="webjars/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+	<script src="js/zadatak7.js" type="text/javascript"></script>
+</head>
+<body>
+	<form >
+		<select name="id" id="select"></select>
+	</form>
+	<hr/>
+	<form>
+		<table class="tabela1">	
+			<tr>
+				<td>Broj kreveta</td>
+				<td><input type="number" value="1" name="brojKreveta"/></td>
+			</tr>
+			<tr>
+				<td>Cena nocenja</td>
+				<td><input type="number" name="cenaNocenja"/></td>
+			</tr>
+			<tr>
+				<td>Terasa</td>
+				<td>
+					<input name="terasa" value="true" type="radio"/> true
+					<input name="terasa" value="false" type="radio"/> false
+				</td>
+			<tr>
+				<td></td><td><input type="submit" value="Dodaj"/></td>
+			</tr>
+		</table>
+	</form>
+	<hr/>
+	<h1>Pregled soba</h1>
+	<table class="tabela">
+		<tr>
+			<th>Soba</th>
+			<th>Broj kreveta</th>
+			<th>Cena nocenja</th>
+			<th>Terasa</th>
+			<th>Cena boravka</th>
+		</tr>
+	</table>
+</body>
+</html>

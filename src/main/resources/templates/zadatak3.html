@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rezervacije</title>
+	<link rel="stylesheet" type="text/css" href="tabela.css">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Tip sobe</th>
+			<th>Vreme ulaska</th>
+			<th>Vreme izlaska</th>
+			<th>Gost</th>
+			<th>Placanje</th>
+			<th>Dorucak</th>
+		</tr>
+		<tr th:each="it : ${rezervacije}">
+			<td th:text="${it.soba.tip}"></td>
+			<td th:text="${it.ulazak}">0</td>
+			<td th:text="${it.izlazak}"></td>
+			<td th:text="${it.gost}"></td>
+			<td th:text="${it.placanje}"></td>
+			<td th:text="${it.dorucak}"></td>
+		</tr>
+	</table>
+	<h4>Ukupkana zarada: <span th:text="${zarada}"></span></h4>
+</body>
+</html>

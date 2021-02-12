@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rezervacije</title>
+	<link rel="stylesheet" type="text/css" href="tabela.css">
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Soba</td>
+				<td>
+					<select>
+						<option>studio</option>
+						<option>jednokrevetna</option>
+						<option>dvokrevetna</option>
+						<option>apartman</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td>Vreme ulaska:</td><td><input type="text"/></td></tr>
+			<tr><td>Vreme izlaska:</td><td><input type="text"/></td></tr>
+			<tr><td>Gost:</td><td><input type="text"/></td></tr>
+			<tr>
+				<td>Placanje:</td>
+				<td>
+					<input type="radio"/> gotovina
+					<input type="radio"/> kartica
+				</td>
+			</tr>
+			<tr>
+				<td>Dorucak:</td>
+				<td>
+				 <input type="checkbox">omlet
+ 				 <input type="checkbox">przenice
+				</td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Dodaj rezervaciju"/></td></tr>
+		</table>
+	</form>
+	<hr/>
+	<table>
+		<tr>
+			<th>Tip sobe</th>
+			<th>Vreme ulaska</th>
+			<th>Vreme izlaska</th>
+			<th>Gost</th>
+			<th>Placanje</th>
+			<th>Dorucak</th>
+		</tr>
+		<tr>
+			<td>Jednokrevetna</td>
+			<td>2019-12-18 10:30:00</td>
+			<td>2019-12-23 14:00:00</td>
+			<td>Petar Petrovic</td>
+			<td>kartica</td>
+			<td>przenice</td>
+		</tr>
+	</table>
+</body>
+</html>

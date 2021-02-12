@@ -1,0 +1,54 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rezervacije</title>
+	<link rel="stylesheet" type="text/css" href="tabela.css">
+</head>
+<body>
+	<form method="get">
+		<table>
+			<tr>
+				<th>Tip sobe</th>
+				<th>Vreme ulaska</th>
+				<th>Vreme izlaska</th>
+				<th>Gost</th>
+				<th>Placanje</th>
+				<th>Dorucak</th>
+			</tr>
+			<tr>
+				<th>
+					<input type="search" name="tip" th:value="${param.tip}?:''">
+				</th>
+				<th></th>
+				<th></th>
+				<th>
+					<input type="search" name="gost" th:value="${param.gost}?:''">
+				</th>
+				<th>
+					<select name="placanje">
+						<option value="0">odaberi</option>
+						<option th:each="it : ${placanjeLista}" th:value="${it}" th:text="${it}" th:selected="${#strings.equals(it, param.placanje)}"></option>
+					</select>
+				</th>
+				<th>
+					<select name="dorucak">
+						<option value="0">odaberi</option>
+						<option th:each="it : ${dorucakLista}" th:value="${it}" th:text="${it}" th:selected="${#strings.equals(it, param.dorucak)}"></option>
+					</select>
+				</th>
+				<th>
+					<input type="submit" value="Pretrazi">
+				</th>
+			</tr>
+			<tr th:each="it : ${rezervacije}">
+				<td th:text="${it.soba.tip}"></td>
+				<td th:text="${it.ulazak}">0</td>
+				<td th:text="${it.izlazak}"></td>
+				<td th:text="${it.gost}"></td>
+				<td th:text="${it.placanje}"></td>
+				<td th:text="${it.dorucak}"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

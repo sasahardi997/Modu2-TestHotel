@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rezervacije</title>
+	<script src="webjars/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+	<script src="js/zadatak6.js" type="text/javascript"></script>
+</head>
+<body>
+	<form get="zadatak6.html">
+		<table>
+			<tr>
+				<td>Soba</td>
+				<td>
+					<select name="soba" id="soba">
+						<option value="studio">studio</option>
+						<option value="jednokrevetna">jednokrevetna</option>
+						<option value="dvokrevetna">dvokrevetna</option>
+						<option value="apartman">apartman</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td>Vreme ulaska:</td><td><input type="text" name="ulazak"/></td></tr>
+			<tr><td>Vreme izlaska:</td><td><input type="text" name="izlazak"/></td></tr>
+			<tr><td>Gost:</td><td><input type="text" name="gost"/></td></tr>
+			<tr>
+				<td>Placanje:</td>
+				<td>
+					<input type="radio" name="placanje" value="gotovina"/> gotovina
+					<input type="radio" name="placanje" value="kartica"/> kartica
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="prikazi"> <span>Prikazi Dorucak</span></td>
+			</tr>
+			<tr class="dorucak" style="display:none">
+				<td>Dorucak:</td>
+				<td>
+				 <input type="checkbox" name="dorucak" id="dorucak" value="omlet">omlet
+ 				 <input type="checkbox" name="dorucak" id="dorucak" value="przenice">przenice
+				</td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Dodaj rezervaciju"/></td></tr>
+		</table>
+	</form>
+</body>
+</html>
